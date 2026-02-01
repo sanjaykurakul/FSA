@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Details Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+        }
+        .form-container {
+            width: 350px;
+            margin: 60px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+        button {
+            margin-top: 15px;
+            width: 100%;
+            padding: 10px;
+            background: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+
+    <script>
+        function validateForm() {
+            var vtu = document.getElementById("vtu").value;
+            var email = document.getElementById("email").value;
+            var phone = document.getElementById("phone").value;
+
+            var vtuPattern = /^[0-9]{2}[A-Z]{2}[0-9]{2}[A-Z]{2}[0-9]{3}$/;
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            var phonePattern = /^[0-9]{10}$/;
+
+            if (!vtuPattern.test(vtu)) {
+                alert("Enter a valid VTU Number (e.g., 1RV21CS001)");
+                return false;
+            }
+
+            if (!emailPattern.test(email)) {
+                alert("Enter a valid Email ID");
+                return false;
+            }
+
+            if (!phonePattern.test(phone)) {
+                alert("Enter a valid 10-digit Phone Number");
+                return false;
+            }
+
+            alert("Form submitted successfully!");
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="form-container">
+        <h2>Student Form</h2>
+        <form onsubmit="return validateForm()">
+            <label>VTU Number</label>
+            <input type="text" id="vtu" placeholder="Enter VTU Number">
+
+            <label>Email</label>
+            <input type="text" id="email" placeholder="Enter Email">
+
+            <label>Phone Number</label>
+            <input type="text" id="phone" placeholder="Enter Phone Number">
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
