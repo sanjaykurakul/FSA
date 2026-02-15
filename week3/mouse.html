@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mouse Quadrant Detector</title>
+</head>
+
+<body>
+
+<h2 style="text-align:center;">Move Mouse Around</h2>
+
+<script>
+document.addEventListener("mousemove", function(e){
+
+    let midWidth = window.innerWidth/2;
+    let midHeight = window.innerHeight/2;
+
+    if(e.clientX < midWidth && e.clientY < midHeight){
+        document.body.style.background = "#fde68a";
+    }
+    else if(e.clientX >= midWidth && e.clientY < midHeight){
+        document.body.style.background = "#a5f3fc";
+    }
+    else if(e.clientX < midWidth && e.clientY >= midHeight){
+        document.body.style.background = "#fbcfe8";
+    }
+    else{
+        document.body.style.background = "#bbf7d0";
+    }
+});
+</script>
+
+</body>
+</html>

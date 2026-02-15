@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ES6 Practice</title>
+</head>
+<body>
+
+<h2 id="scoreDisplay">Score: 0</h2>
+<button onclick="increase()">Add Point</button>
+
+<script>
+let score = 0;
+
+function increase(){
+    score++;
+    document.getElementById("scoreDisplay").textContent = "Score: " + score;
+}
+
+const generateReceipt = (price, tip) => {
+    const total = price + tip;
+    console.log(`Final Amount: ₹${total}`);
+};
+
+generateReceipt(500,50);
+
+const student = {name:"Sanjay", branch:"CSE"};
+const {name, branch} = student;
+
+const numbers = [5,10,15];
+const [x,y,z] = numbers;
+
+const collegeFriends = ["Arun","Ravi"];
+const workFriends = ["Kiran","Deepak"];
+
+const partyList = ["Me", ...collegeFriends, ...workFriends];
+
+function invite(host, ...guests){
+    console.log(host, guests);
+}
+
+invite("Sanjay","Arun","Ravi");
+
+function orderPizza(){
+    return new Promise((resolve)=>{
+        setTimeout(()=>{
+            resolve("Pizza Ready!");
+        },2000);
+    });
+}
+
+orderPizza().then(msg=>console.log(msg));
+</script>
+
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Layout Studio</title>
+
+<style>
+body{
+    margin:0;
+    font-family:'Trebuchet MS', sans-serif;
+    background:#faedcd;
+}
+
+header{
+    background:#283618;
+    color:#fefae0;
+    padding:25px;
+    text-align:center;
+    letter-spacing:2px;
+}
+
+nav{
+    background:#606c38;
+    padding:12px;
+    text-align:center;
+}
+
+nav a{
+    color:#fefae0;
+    margin:0 18px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.grid-area{
+    display:grid;
+    grid-template-columns:240px auto;
+    min-height:80vh;
+}
+
+aside{
+    background:#bc6c25;
+    color:white;
+    padding:20px;
+}
+
+main{
+    padding:25px;
+}
+
+article{
+    background:#fefae0;
+    padding:20px;
+    margin-bottom:20px;
+    border-radius:8px;
+    box-shadow:3px 3px 12px rgba(0,0,0,0.15);
+}
+
+footer{
+    background:#283618;
+    color:#fefae0;
+    text-align:center;
+    padding:15px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Creative Grid Framework</h1>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Explore</a>
+    <a href="#">Contact</a>
+</nav>
+
+<div class="grid-area">
+    <aside>
+        <h3>Navigation Panel</h3>
+        <p>Side widgets and quick actions.</p>
+    </aside>
+
+    <main>
+        <article>
+            <h2>Structured Layout</h2>
+            <p>This layout balances warm earth tones with strong contrast.</p>
+        </article>
+
+        <article>
+            <h2>Modern UI Feel</h2>
+            <p>Color psychology improves visual appeal and memorability.</p>
+        </article>
+    </main>
+</div>
+
+<footer>
+    Designed for Full Stack Practice
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Tantraz Registration</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Verdana;
+    background:#1a1a1a;
+    color:#f8f9fa;
+}
+
+form{
+    max-width:520px;
+    margin:40px auto;
+    background:#2b2b2b;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 0 20px rgba(0,245,212,0.3);
+}
+
+h2{
+    text-align:center;
+    color:#00f5d4;
+}
+
+label{
+    font-size:14px;
+}
+
+input, select, textarea{
+    width:100%;
+    padding:10px;
+    margin:8px 0 18px;
+    border:none;
+    border-radius:6px;
+}
+
+input, select, textarea{
+    background:#f8f9fa;
+    color:#000;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    background:#9b5de5;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#f15bb5;
+}
+</style>
+</head>
+
+<body>
+
+<form>
+
+<h2>Tantraz 2026</h2>
+
+<label>Full Name *</label>
+<input type="text" required placeholder="Enter your name" aria-label="Full Name">
+
+<label>Email *</label>
+<input type="email" required placeholder="example@mail.com" aria-label="Email">
+
+<label>Category *</label>
+<select required>
+    <option value="">Choose</option>
+    <option>Individual</option>
+    <option>Team</option>
+    <option>Audience</option>
+</select>
+
+<label>T-Shirt Size</label>
+<input type="radio" name="size"> S
+<input type="radio" name="size"> M
+<input type="radio" name="size"> L
+<input type="radio" name="size"> XL
+
+<label>Technical Interests</label>
+<input type="checkbox"> AI
+<input type="checkbox"> Web Dev
+<input type="checkbox"> Cloud
+
+<label>Expectations</label>
+<textarea maxlength="200" placeholder="Max 200 characters"></textarea>
+
+<button type="submit">Submit</button>
+
+</form>
+
+</body>
+</html>
